@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "77513337794",
+    "firebase_url": "https://language-2f0f0.firebaseio.com",
+    "project_id": "language-2f0f0",
+    "storage_bucket": "language-2f0f0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77513337794:android:6bdab233eef4ab1b96045b",
+        "android_client_info": {
+          "package_name": "com.eone.language_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77513337794-ut92cbj7b2ctpdogfu0otg7ln0s86gkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eone.language_app",
+            "certificate_hash": "c818d00e94c83f2412d506306c62c392450f9575"
+          }
+        },
+        {
+          "client_id": "77513337794-hspc2m9e3ik7dlqeil29c9lok8cb79h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB_XBCene8Kq8mTKgWcgyzN6i6jlC4dgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77513337794-hspc2m9e3ik7dlqeil29c9lok8cb79h8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "77513337794-id6c35gthf6la21fggu3ckaohnon02ns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "eOne.messaging"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77513337794:android:7688ed7f05e09bdd96045b",
+        "android_client_info": {
+          "package_name": "com.example.education_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77513337794-hspc2m9e3ik7dlqeil29c9lok8cb79h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB_XBCene8Kq8mTKgWcgyzN6i6jlC4dgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77513337794-hspc2m9e3ik7dlqeil29c9lok8cb79h8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "77513337794-id6c35gthf6la21fggu3ckaohnon02ns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "eOne.messaging"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
