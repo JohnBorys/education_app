@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:education_app/core/errors/failures.dart';
+import 'package:education_app/src/on_boarding/domain/repositories/on_boarding_repository.dart';
 import 'package:education_app/src/on_boarding/domain/usecases/check_if_user_is_first_time.dart';
-import 'package:education_app/src/on_boarding/repositories/on_boarding_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -19,14 +19,14 @@ void main() {
   test(
       'should call the [OnBoardingRepository.checkIfUserIsFirstTime] '
       'and return the right data', () async {
-    when(() => repository.checkIfUserIsFirstTime())
+    when(() => repository.checkIfUserIsFirstTimer())
         .thenAnswer((_) async => const Right(true));
 
     final result = await usecase();
 
     expect(result, equals(const Right<dynamic, bool>(true)));
 
-    verify(() => repository.checkIfUserIsFirstTime()).called(1);
+    verify(() => repository.checkIfUserIsFirstTimer()).called(1);
     verifyNoMoreInteractions(repository);
   });
 
@@ -34,7 +34,7 @@ void main() {
     'should call the [OnBoardingRepository.checkIfUserIsFirstTime] '
     'and return the right data',
     () async {
-      when(() => repository.checkIfUserIsFirstTime()).thenAnswer(
+      when(() => repository.checkIfUserIsFirstTimer()).thenAnswer(
         (_) async => Left(
           ServerFailure(
             message: 'Unknown Error Occurred',
@@ -56,7 +56,7 @@ void main() {
           ),
         ),
       );
-      verify(() => repository.checkIfUserIsFirstTime()).called(1);
+      verify(() => repository.checkIfUserIsFirstTimer()).called(1);
       verifyNoMoreInteractions(repository);
     },
   );

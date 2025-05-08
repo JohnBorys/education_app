@@ -1,6 +1,6 @@
 import 'package:education_app/core/usecases/usecases.dart';
 import 'package:education_app/core/utils/typdefs.dart';
-import 'package:education_app/src/on_boarding/repositories/on_boarding_repository.dart';
+import 'package:education_app/src/on_boarding/domain/repositories/on_boarding_repository.dart';
 
 class CheckIfUserIsFirstTime extends UsecaseWithoutParams<bool> {
   const CheckIfUserIsFirstTime({required OnBoardingRepository repository})
@@ -9,5 +9,5 @@ class CheckIfUserIsFirstTime extends UsecaseWithoutParams<bool> {
   final OnBoardingRepository _repository;
 
   @override
-  ResultFuture<bool> call() async => _repository.checkIfUserIsFirstTime();
+  ResultFuture<bool> call() async => _repository.checkIfUserIsFirstTimer();
 }

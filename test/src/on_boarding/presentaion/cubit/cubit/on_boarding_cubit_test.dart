@@ -3,7 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:education_app/core/errors/failures.dart';
 import 'package:education_app/src/on_boarding/domain/usecases/cache_first_timer.dart';
 import 'package:education_app/src/on_boarding/domain/usecases/check_if_user_is_first_time.dart';
-import 'package:education_app/src/on_boarding/presentaion/cubit/cubit/on_boarding_cubit.dart';
+import 'package:education_app/src/on_boarding/presentaion/cubit/on_boarding_cubit.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -22,7 +22,7 @@ void main() {
     checkIfUserIsFirstTime = MockCheckIfUserIsFirstTime();
     cubit = OnBoardingCubit(
       cacheFirstTimer: cacheFirstTimer,
-      checkIfUserIsFirstTime: checkIfUserIsFirstTime,
+      checkIfUserIsFirstTimer: checkIfUserIsFirstTime,
     );
   });
 
@@ -86,10 +86,10 @@ void main() {
         );
         return cubit;
       },
-      act: (cubit) => cubit.checkIfUserIsFirstTime(),
+      act: (cubit) => cubit.checkIfUserIsFirstTimer(),
       expect: () => const [
         CheckingIfUserIsFirstTime(),
-        OnBoardingStatus(isFirstTime: false),
+        OnBoardingStatus(isFirstTimer: false),
       ],
       verify: (_) {
         verify(() => checkIfUserIsFirstTime()).called(1);
@@ -106,10 +106,10 @@ void main() {
         );
         return cubit;
       },
-      act: (cubit) => cubit.checkIfUserIsFirstTime(),
+      act: (cubit) => cubit.checkIfUserIsFirstTimer(),
       expect: () => const [
         CheckingIfUserIsFirstTime(),
-        OnBoardingStatus(isFirstTime: true),
+        OnBoardingStatus(isFirstTimer: true),
       ],
       verify: (_) {
         verify(() => checkIfUserIsFirstTime()).called(1);

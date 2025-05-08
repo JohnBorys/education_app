@@ -24,12 +24,12 @@ final class UserCached extends OnBoardingState {
 }
 
 final class OnBoardingStatus extends OnBoardingState {
-  const OnBoardingStatus({required this.isFirstTime});
+  const OnBoardingStatus({required this.isFirstTimer});
 
-  final bool isFirstTime;
+  final bool isFirstTimer;
 
   @override
-  List<Object> get props => [isFirstTime];
+  List<Object> get props => [isFirstTimer];
 }
 
 final class OnBoardingError extends OnBoardingState {

@@ -3,7 +3,7 @@ import 'package:education_app/core/errors/exceptions.dart';
 import 'package:education_app/core/errors/failures.dart';
 import 'package:education_app/src/on_boarding/data/data_sources/on_boarding_local_data_source.dart';
 import 'package:education_app/src/on_boarding/data/repositories/on_boarding_repository_impl.dart';
-import 'package:education_app/src/on_boarding/repositories/on_boarding_repository.dart';
+import 'package:education_app/src/on_boarding/domain/repositories/on_boarding_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -66,7 +66,7 @@ void main() {
       when(() => dataSource.checkIfUserIsFirstTime())
           .thenAnswer((_) async => true);
 
-      final result = await repositoryImpl.checkIfUserIsFirstTime();
+      final result = await repositoryImpl.checkIfUserIsFirstTimer();
 
       expect(result, equals(const Right<dynamic, bool>(true)));
 
@@ -81,7 +81,7 @@ void main() {
         const CacheException(message: 'Insufficient storage'),
       );
 
-      final result = await repositoryImpl.checkIfUserIsFirstTime();
+      final result = await repositoryImpl.checkIfUserIsFirstTimer();
 
       expect(
         result,
